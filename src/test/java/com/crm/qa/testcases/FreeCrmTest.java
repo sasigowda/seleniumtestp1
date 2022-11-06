@@ -54,7 +54,7 @@ public class FreeCrmTest {
 		// Use jQuery to add jquery-growl to the page
 		js.executeScript("$.getScript('https://the-internet.herokuapp.com/js/vendor/jquery.growl.js')");
 
-		// js.executeScript("$.getScript('C:\ProgramData\Jenkins\.jenkins\workspace\test1\src\testcases\jquery.growl.js')");
+		// js.executeScript("$.getScript('/var/lib/jenkins/workspace/test/src/testcases/jquery.growl.js')");
 
 		// Use jQuery to add jquery-growl styles to the page
 		js.executeScript("$('head').append('<link rel=\"stylesheet\" "
@@ -83,7 +83,7 @@ public class FreeCrmTest {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// now copy the screenshot to desired location using copyFile //method
 		FileUtils.copyFile(src, 
-				new File("C:\Users\SasiGowda\Documents\MyPOMFramework\" + fileName +".png"));
+				new File("/var/lib/jenkins/workspace/test/" + fileName +".png"));
 
 	}
 
